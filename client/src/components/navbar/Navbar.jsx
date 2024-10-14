@@ -107,7 +107,7 @@ export default function Navbar() {
         <div
           className={`w-[60%] h-[calc(100vh-2.75rem)] bg-primaryColor text-titleColor ${
             navMenu ? "translate-x-0" : "translate-x-[-100%]"
-          } duration-700 md:hidden ps-3 sm:ps-5 py-10`}
+          } duration-700 md:hidden ps-3 sm:ps-5 pt-10 pb-24`}
         >
           <div className="h-full flex flex-col justify-between">
             <div className="flex flex-col gap-7">
