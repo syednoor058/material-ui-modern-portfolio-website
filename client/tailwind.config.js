@@ -7,9 +7,9 @@ export default {
   theme: {
     extend: {
       fontFamily: {
-        titleFont: ["Josefin Sans", "sans-serif"],
-        bodyFont: ["Montserrat", "sans-serif"],
-        accentFont: ["Dancing Script", "sans-serif"],
+        titleFont: ["Montserrat", "sans-serif"],
+        bodyFont: ["Josefin Sans", "sans-serif"],
+        accentFont: ["Satisfy", "sans-serif"],
       },
 
       colors: {
