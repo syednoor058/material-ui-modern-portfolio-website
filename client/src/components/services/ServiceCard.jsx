@@ -1,11 +1,11 @@
 // import React from 'react'
 
 // eslint-disable-next-line react/prop-types
-export default function ServiceCard({ title, desc }) {
+export default function ServiceCard({ cover, title, desc }) {
   return (
     <div className="flex flex-col gap-5 justify-center items-center">
-      <div className="w-40 lg:w-60 h-40 lg:h-60 border border-accentColor flex justify-center items-center">
-        Image
+      <div className="w-24 lg:w-40 h-24 lg:h-40 flex justify-center items-center">
+        <img src={cover} alt={title} />
       </div>
       <div className="flex flex-col gap-2 text-center">
         <div className="font-bold uppercase font-titleFont text-titleColor text-base lg:text-2xl">
