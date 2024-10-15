@@ -114,11 +114,11 @@ export default function Navbar() {
           </div>
         </div>
         <div
-          className={`w-[60%] h-screen bg-gray-950 text-titleColor ${
+          className={`w-[60%] h-screen overflow-y-auto bg-gray-950 text-titleColor ${
             navMenu ? "translate-x-0" : "translate-x-[-102%]"
           } duration-700 md:hidden ps-3 sm:ps-5 pt-5 pb-16 fixed z-[1000]`}
         >
-          <div className="w-full h-full flex flex-col justify-between relative">
+          <div className="w-full h-full flex flex-col gap-20 relative">
             <div className="flex flex-col gap-2">
               <img className="w-10 h-10" src={logo} alt="shaed_noor_logo" />
               <div className="uppercase font-bold font-bodyFont text-accentColor text-2xl">
