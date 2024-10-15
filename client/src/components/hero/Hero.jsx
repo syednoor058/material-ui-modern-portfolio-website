@@ -26,13 +26,13 @@ export default function Hero() {
             <div className="font-accentFont text-2xl md:text-4xl">
               Hi there,
             </div>
-            <div className="text-2xl md:text-4xl xl:text-5xl text-titleColor leading-none font-titleFont">
+            <div className="text-2xl sm:text-4xl md:text-5xl lg:text-4xl xl:text-6xl text-titleColor leading-none font-titleFont">
               I am{" "}
               <span className="text-3xl lg:text-4xl xl:text-6xl leading-none font-bold text-accentColor font-titleFont uppercase">
                 Shaed Noor
               </span>
             </div>
-            <div className="text-xl xl:text-4xl text-titleColor font-titleFont leading-none">
+            <div className="text-xl sm:text-2xl md:text-4xl lg:text-2xl xl:text-4xl text-titleColor font-titleFont leading-none">
               An Expert <span className="">{text}</span>
               <Cursor
                 cursorBlinking="false"
@@ -40,7 +40,7 @@ export default function Hero() {
                 cursorColor="#00ADB5"
               />
             </div>
-            <div className="pt-2 md:pt-5 text-sm md:text-base">
+            <div className="pt-2 md:pt-5">
               Dynamic, motivated, hardworking, keen about the changes in the
               dynamic world of computer science technology. I want to export my
               potential & acquire knowledge & skills in my profession as

@@ -6,7 +6,7 @@ import Services from "../../components/services/Services";
 
 export default function Home() {
   return (
-    <div className="absolute bg-primaryColor">
+    <div className="absolute bg-titleColor">
       <Hero />
       <Insights />
       <Services />

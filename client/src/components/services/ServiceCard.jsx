@@ -8,10 +8,12 @@ export default function ServiceCard({ cover, title, desc }) {
         <img src={cover} alt={title} />
       </div>
       <div className="flex flex-col gap-2 text-center">
-        <div className="font-bold uppercase font-titleFont text-titleColor text-base lg:text-2xl">
+        <div className="font-bold uppercase font-titleFont text-primaryColor text-base lg:text-2xl">
           {title}
         </div>
-        <div className="text-xs lg:text-base">{desc}</div>
+        <div className="text-xs lg:text-base text-left xl:text-center">
+          {desc}
+        </div>
       </div>
     </div>
   );
