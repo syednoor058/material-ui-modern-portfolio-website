@@ -110,7 +110,7 @@ export default function Navbar() {
             className="w-[1/3] hover:text-accentColor cursor-pointer"
             onClick={menuToggle}
           >
-            <MenuIcon />
+            <MenuIcon fontSize="large" />
           </div>
         </div>
         <div
