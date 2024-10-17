@@ -1,43 +1,42 @@
-// import React from 'react'
-
+/* eslint-disable react/prop-types */
+// import React from "react";
 import { GoArrowUpRight } from "react-icons/go";
-import { RxGithubLogo } from "react-icons/rx";
+import { PiGithubLogoFill } from "react-icons/pi";
 import { Link } from "react-router-dom";
 
-// eslint-disable-next-line react/prop-types
-export default function ProjectCard({ cover, title, desc, github }) {
+export default function ProjectCard(props) {
   return (
-    <div className="flex flex-col gap-2 sm:gap-5 group shadow-xl relative shadow-gray-300 overflow-hidden">
-      <div className="relative w-full flex justify-center items-center">
+    <div className="w-full flex relative justify-center items-center rounded overflow-hidden group cursor-pointer shadow-xl">
+      <div className="w-full aspect-square">
         <img
-          className="rounded group-hover:scale-[1.1] duration-700"
-          src={cover}
-          alt={title}
+          src={props.coverImg}
+          alt=""
+          className="w-full h-full group-hover:blur-[3px] duration-[600ms] object-cover"
         />
       </div>
-      <div className="w-full flex flex-col justify-between absolute p-5 bg-gray-950 bg-opacity-80 backdrop-blur-[3px] top-0 bottom-[0] translate-y-[100%] group-hover:translate-y-0 duration-700">
-        <div className="flex flex-col gap-3">
-          <div className="font-titleFont text-lg lg:text-2xl font-semibold text-titleColor">
-            {title}
+      <div className="w-full h-full absolute bg-accentColor bg-opacity-85 p-3 sm:p-5 z-[2] translate-y-[100%] group-hover:translate-y-0 duration-[600ms] flex flex-col gap-1 sml:gap-3 xl:gap-5 items-center justify-between uppercase">
+        <p className="font-titleFont text-sm sm:text-lg xl:text-xl text-titleColor font-medium">
+          {props.title}
+        </p>
+        <div className="w-full flex flex-row justify-between items-center">
+          <div className="w-full flex justify-end items-center gap-3">
+            <Link
+              className="aspect-square flex flex-row justify-center items-center text-[8px] sml:text-sm md:text-base text-primaryColor bg-titleColor rounded-full cursor-pointer hover:scale-[1.1] duration-[400ms] font-titleFont font-medium p-2 sm:p-3 shadow-xl"
+              to={props.detailsLink}
+            >
+              <span className="text-base sm:text-xl md:text-2xl">
+                <PiGithubLogoFill />
+              </span>
+            </Link>
+            <Link
+              className="aspect-square flex flex-row justify-center items-center text-[8px] sml:text-sm md:text-base text-primaryColor bg-titleColor rounded-full cursor-pointer hover:scale-[1.1] duration-[400ms] font-titleFont font-medium p-2 sm:p-3 shadow-xl"
+              to={props.detailsLink}
+            >
+              <span className="text-base sm:text-xl md:text-2xl">
+                <GoArrowUpRight />
+              </span>
+            </Link>
           </div>
-          <div className="text-sm lg:text-base text-bodyColor">{desc}</div>
-        </div>
-        <div className="flex flex-row gap-3 font-titleFont">
-          <div className="px-3 text-xs sm:text-base py-2 uppercase bg-accentColor text-titleColor rounded-sm flex justify-center items-center gap-2 leading-3 shadow-xl">
-            View Details
-            <span>
-              <GoArrowUpRight />
-            </span>
-          </div>
-          <Link
-            to={github}
-            className="px-3 py-2 text-xs sm:text-base border-accentColor border rounded-sm text-accentColor uppercase flex justify-center items-center gap-2 leading-3 shadow-xl hover:scale-[1.1] duration-300"
-          >
-            Github{" "}
-            <span>
-              <RxGithubLogo />
-            </span>
-          </Link>
         </div>
       </div>
     </div>

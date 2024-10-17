@@ -1,4 +1,5 @@
 // import React from "react";
+import CloseIcon from "@mui/icons-material/Close";
 import FacebookIcon from "@mui/icons-material/Facebook";
 import GitHubIcon from "@mui/icons-material/GitHub";
 import KeyboardDoubleArrowLeftIcon from "@mui/icons-material/KeyboardDoubleArrowLeft";
@@ -16,7 +17,7 @@ export default function Navbar() {
   };
   return (
     <div className="font-bodyFont">
-      <div className="w-full bg-primaryColor py-1 px-3 sm:px-5 md:px-10 lg:px-20 text-titleColor font-bodyFont hidden md:block fixed z-[1000] shadow-md">
+      <div className="w-full bg-primaryColor bg-opacity-80 backdrop-blur-[10px] py-1 px-3 sm:px-5 md:px-10 lg:px-20 text-titleColor font-bodyFont hidden md:block fixed z-[1000] shadow-md">
         <div className="w-full flex flex-row justify-between gap-7">
           <div>
             <img className="w-14 h-14" src={logo} alt="shaed_noor_logo" />
@@ -102,15 +103,19 @@ export default function Navbar() {
         </div>
       </div>
       <div>
-        <div className="w-full py-1 px-3 sm:px-5 flex flex-row md:hidden gap-5 justify-between text-titleColor bg-primaryColor items-center fixed z-[1000] shadow-md">
+        <div className="w-full py-2 px-3 sm:px-5 flex flex-row md:hidden gap-5 justify-between text-titleColor bg-primaryColor items-center fixed z-[1000] shadow-md bg-opacity-80 backdrop-blur-[10px]">
           <div className="w-[1/3] flex justify-center items-center">
-            <img className="w-10 h-10" src={logo} alt="shaed_noor_logo" />
+            <img className="w-8 h-8" src={logo} alt="shaed_noor_logo" />
           </div>
           <div
-            className="w-[1/3] hover:text-accentColor cursor-pointer"
+            className="w-[1/3] hover:text-accentColor cursor-pointer py-1 px-2 border rounded-md border-titleColor hover:border-accentColor duration-500"
             onClick={menuToggle}
           >
-            <MenuIcon fontSize="large" />
+            {navMenu ? (
+              <CloseIcon fontSize="small" />
+            ) : (
+              <MenuIcon fontSize="small" />
+            )}
           </div>
         </div>
         <div

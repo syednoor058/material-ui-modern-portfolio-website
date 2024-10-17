@@ -10,15 +10,23 @@ import ServiceCard from "./ServiceCard";
 export default function Services() {
   return (
     <div className="px-3 sm:px-5 md:px-10 lg:px-20 py-10 lg:py-20 font-bodyFont text-secondaryColor flex flex-col gap-7 lg:gap-16 bg-titleColor">
-      <div className="w-full flex flex-col gap-1 lg:gap-3">
-        <div className="uppercase text-center w-full text-xs lg:text-base leading-3">
-          What I Offer
-        </div>
-        <div className="w-full text-center font-bold font-titleFont text-primaryColor uppercase text-xl lg:text-5xl leading-3">
-          Quality Service{" "}
-          <span className="lowercase font-accentFont text-accentColor font-normal text-3xl lg:text-7xl">
-            delivery
-          </span>
+      <div>
+        <div className="w-full flex flex-col gap-5 lg:gap-10">
+          <div>
+            <p className="uppercase text-xs md:text-base text-center text-secondaryColor flex flex-row gap-2 justify-center items-center leading-none">
+              <div className="h-[1px] w-8 bg-accentColor mb-1"></div>
+              What I Do
+              <div className="h-[1px] w-8 bg-accentColor mb-1"></div>
+            </p>
+          </div>
+          <div className="flex flex-col-reverse gap-5 lgl:gap-0 lgl:flex-row-reverse justify-between items-center">
+            <p className="w-full text-3xl sml:text-5xl md:text-6xl lg:text-5xl xl:text-6xl uppercase font-bold text-center text-primaryColor leading-none font-titleFont">
+              Quality Service{" "}
+              <span className="font-accentFont ps-2 lowercase text-5xl sml:text-7xl md:text-8xl font-normal text-accentColor">
+                delivery
+              </span>
+            </p>
+          </div>
         </div>
       </div>
       <div className="w-full grid grid-cols-2 sm:grid-cols-2 lg:grid-cols-3 gap-4 md:gap-5 xl:gap-10">

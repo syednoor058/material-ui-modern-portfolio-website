@@ -1,64 +1,85 @@
-// import React from 'react'
-import elearningAutoTestImg from "../../assets/images/projects_images/app_testing.webp";
-import housePredImg from "../../assets/images/projects_images/house_price_pred.webp";
-import portWebImg from "../../assets/images/projects_images/personal_portfolio.webp";
-import preCarPredImg from "../../assets/images/projects_images/preowned_car_price_pred.webp";
-import sportswearImg from "../../assets/images/projects_images/sportswear_web.webp";
-import wordpressTest from "../../assets/images/projects_images/wordpress_plugins_testing.webp";
+// import React from "react";
+import appTesting from "../../assets/images/projects_images/app_testing.webp";
+import housePred from "../../assets/images/projects_images/house_price_pred.webp";
+import hungryShaed from "../../assets/images/projects_images/hungry_shaed.webp";
+import movieSuggest from "../../assets/images/projects_images/movie_sugges_sys.webp";
+import personalPortfolio from "../../assets/images/projects_images/personal_portfolio.webp";
+import carPricePred from "../../assets/images/projects_images/preowned_car_price_pred.webp";
+import sportswearWeb from "../../assets/images/projects_images/sportswear_web.webp";
+import pluginsTesting from "../../assets/images/projects_images/wordpress_plugins_testing.webp";
 import ProjectCard from "./ProjectCard";
 
-export default function ProjectShowcase() {
+export default function Project() {
   return (
-    <div className="px-3 sm:px-5 md:px-10 lg:px-20 py-10 lg:py-20 font-bodyFont text-secondaryColor flex flex-col gap-7 lg:gap-16 bg-titleColor">
-      <div className="w-full flex flex-col gap-1 lg:gap-3">
-        <div className="uppercase text-center w-full text-xs lg:text-base leading-3">
-          Project Showcase
+    <div id="projects">
+      <div className="bg-darkBG3 w-full pt-10 px-3 pb-10 md:px-10 lg:px-20 lg:pb-20 overflow-hidden flex flex-col gap-5 lg:gap-10 font-bodyFont text-secondaryColor">
+        <div>
+          <div className="w-full flex flex-col gap-5 lg:gap-10">
+            <div>
+              <p className="uppercase text-xs md:text-base text-center text-secondaryColor flex flex-row gap-2 justify-center items-center leading-none">
+                <div className="h-[1px] w-8 bg-accentColor mb-1"></div>
+                Portfolio
+                <div className="h-[1px] w-8 bg-accentColor mb-1"></div>
+              </p>
+            </div>
+            <div className="flex flex-col-reverse gap-5 lgl:gap-0 lgl:flex-row-reverse justify-between items-center">
+              <div className="w-full text-sm md:text-base text-secondaryColor">
+                Welcome to my project portfolio, where creativity meets
+                functionality. Here, you will find a curated selection of my
+                most significant works, showcasing my expertise in front-end and
+                back-end development with UI/UX design, Machine Learning,
+                software manual or automation testing, and more.
+              </div>
+              <p className="w-full text-3xl sml:text-5xl md:text-6xl lg:text-5xl xl:text-6xl uppercase font-bold text-center text-primaryColor leading-none font-titleFont">
+                My Development{" "}
+                <span className="font-accentFont ps-2 lowercase text-5xl sml:text-7xl md:text-8xl font-normal text-accentColor">
+                  journey
+                </span>
+              </p>
+            </div>
+          </div>
         </div>
-        <div className="w-full text-center font-bold font-titleFont text-primaryColor uppercase text-xl lg:text-5xl leading-3">
-          My Development{" "}
-          <span className="lowercase font-accentFont text-accentColor font-normal text-3xl lg:text-7xl">
-            Journey
-          </span>
+        <div className="w-full grid grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-3 md:gap-5 justify-center items-center">
+          <ProjectCard
+            coverImg={sportswearWeb}
+            title="Sportswear E-Commerce Web Application - (MERN Stack)"
+            detailsLink="/house-price-prediction-project"
+          />
+          <ProjectCard
+            coverImg={housePred}
+            title="House Price Prediction System - (Machine Learning)"
+            detailsLink="/house-price-prediction-project"
+          />
+          <ProjectCard
+            coverImg={hungryShaed}
+            title="Food Delivery Web Application - (MERN Stack)"
+            detailsLink="/house-price-prediction-project"
+          />
+          <ProjectCard
+            coverImg={movieSuggest}
+            title="Movie Recommendation System - (Machine Learning)"
+            detailsLink="/house-price-prediction-project"
+          />
+          <ProjectCard
+            coverImg={appTesting}
+            title="E-Learning Application Automation Testing - (Selenium)"
+            detailsLink="/house-price-prediction-project"
+          />
+          <ProjectCard
+            coverImg={personalPortfolio}
+            title="Personal Portfolio Website - (React JS)"
+            detailsLink="/house-price-prediction-project"
+          />
+          <ProjectCard
+            coverImg={carPricePred}
+            title="Pre-Owned Car Price Prediction System - (Machine Learning)"
+          />
+          <ProjectCard
+            coverImg={pluginsTesting}
+            title="WordPress Plug-Ins Automation Testing - (PlayWright)"
+            detailsLink="/house-price-prediction-project"
+          />
         </div>
-      </div>
-      <div className="w-full grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-3 gap-x-5 gap-y-8 xl:gap-x-10 lg:gap-y-10 px-7 pt-5 sm:px-0">
-        <ProjectCard
-          cover={sportswearImg}
-          title="Sportswear Web Application - (MERN Stack)"
-          desc="Developed a house price prediction model using machine learning algorithms. Built a user-friendly website with React.js and FastAPI for the backend, ensuring efficient data processing and accurate predictions."
-          github="https://github.com/syednoor058/kick-off"
-        />
-        <ProjectCard
-          cover={housePredImg}
-          title="House Price Prediction App - (Machine Learning)"
-          desc="Developed a house price prediction model using machine learning algorithms. Built a user-friendly website with React.js and FastAPI for the backend, ensuring efficient data processing and accurate predictions."
-          github="https://github.com/syednoor058/kick-off"
-        />
-
-        <ProjectCard
-          cover={elearningAutoTestImg}
-          title="E-Learning App QA Testing - (Automation Testing)"
-          desc="Developed a house price prediction model using machine learning algorithms. Built a user-friendly website with React.js and FastAPI for the backend, ensuring efficient data processing and accurate predictions."
-          github="https://github.com/syednoor058/kick-off"
-        />
-        <ProjectCard
-          cover={preCarPredImg}
-          title="Cars Price Prediction System - (Machine Learning)"
-          desc="Developed a house price prediction model using machine learning algorithms. Built a user-friendly website with React.js and FastAPI for the backend, ensuring efficient data processing and accurate predictions."
-          github="https://github.com/syednoor058/kick-off"
-        />
-        <ProjectCard
-          cover={portWebImg}
-          title="Personal Portfolio Website - (MERN Stack)"
-          desc="Developed a house price prediction model using machine learning algorithms. Built a user-friendly website with React.js and FastAPI for the backend, ensuring efficient data processing and accurate predictions."
-          github="https://github.com/syednoor058/kick-off"
-        />
-        <ProjectCard
-          cover={wordpressTest}
-          title="WordPress Plugins QA Testing - (Automation Testing)"
-          desc="Developed a house price prediction model using machine learning algorithms. Built a user-friendly website with React.js and FastAPI for the backend, ensuring efficient data processing and accurate predictions."
-          github="https://github.com/syednoor058/kick-off"
-        />
       </div>
     </div>
   );
